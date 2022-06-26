@@ -1,6 +1,10 @@
 # zemlyak58_infra
 zemlyak58 infra repository
 
+testapp_IP =
+testapp_port = 9292
+
+
 bastion_IP = 51.250.0.222
 someinternalhost_IP = 10.128.0.19
 
