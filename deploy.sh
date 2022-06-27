@@ -7,4 +7,6 @@ rm -rf ~/reddit/Gemfile.lock
 
 cd reddit && bundle install
 puma &
+echo -ne '\n' | <yourfinecommandhere>
+
 ps aux | grep puma
