@@ -6,5 +6,5 @@ touch ~/reddit/Gemfile.lock
 rm -rf ~/reddit/Gemfile.lock
 
 cd reddit && bundle install
-puma -d
+puma &
 ps aux | grep puma

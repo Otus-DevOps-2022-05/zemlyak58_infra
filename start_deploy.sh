@@ -14,10 +14,10 @@ SSHKEY=~/.ssh/appuser.pub
 echo "yc compute instance create --name $NAME --hostname $HOSTNAME --memory=$MEMORY --create-boot-disk image-folder-id="$IMAGECATALOG",image-family="$ISO",size=$SIZE --network-interface subnet-name="$ZONE",nat-ip-version=$NAT --metadata serial-port-enable=1 --ssh-key $SSHKEY"
 
 # Создание ВМ с помощью YC
-# `yc compute instance create --name $NAME --hostname $HOSTNAME --memory=$MEMORY --create-boot-disk image-folder-id="$IMAGECATALOG",image-family="$ISO",size=$SIZE --network-interface subnet-name="$ZONE",nat-ip-version=$NAT --metadata serial-port-enable=1 --ssh-key $SSHKEY`
+`yc compute instance create --name $NAME --hostname $HOSTNAME --memory=$MEMORY --create-boot-disk image-folder-id="$IMAGECATALOG",image-family="$ISO",size=$SIZE --network-interface subnet-name="$ZONE",nat-ip-version=$NAT --metadata serial-port-enable=1 --ssh-key $SSHKEY`
 
 
-# sleep 30
+sleep 30
 # Получаем ip адресс созданной машины
 ADDRES=`yc compute instance list | grep $NAME | awk '{print $10}'`
 echo "yc compute instance list | grep $NAME | awk '$ADDRES'"
@@ -44,4 +44,4 @@ ssh -i ~/.ssh/appuser yc-user@"$ADDRES" ./install_mongodb.sh
 ssh -i ~/.ssh/appuser yc-user@"$ADDRES" ./deploy.sh
 # scp *.sh ~/#.
 
-xdg-open http://"$ADDRES":$PORT
+xdg-open http://"$ADDRES":9292
