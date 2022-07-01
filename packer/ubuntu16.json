@@ -1,20 +1,10 @@
 {
-    "variables":
-        {
-            "folder_id": "{{env `folder_id`}}",
-            "image": "{{env `image`}}",
-            "key_file": "{{env `key_file`}}",
-            "ssh_user": "{{env `ssh_user`}}",
-            "zone": "ru-central1-a",
-            "reddit_file": "{{env `reddit_file`}}",
-            "disk_type": "network-hdd"
-        },
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "{{user `key_file`}}",
-            "folder_id": "{{user `folder_id`}}",
-            "source_image_family": "{{user `image`}}",
+            "service_account_key_file": "/home/zemlyak/Documents/OTUS/key.json",
+            "folder_id": "jjjjjjjenkins",
+            "source_image_family": "ubuntu-1604-lts",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
