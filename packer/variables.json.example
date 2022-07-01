@@ -1,0 +1,7 @@
+{
+  "folder_id": "b1gmcu0esncmdden02bk",
+  "image": "ubuntu-1604-lts",
+  "key_file": "/home/zemlyak/Documents/OTUS/key.json",
+  "reddit_file": "/home/zemlyak/Documents/OTUS/zemlyak58_infra/packer/scripts/reddit.service",
+  "ssh_user": "ubuntu"
+}
