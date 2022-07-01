@@ -1,7 +1,7 @@
 {
   "folder_id": "llllleeeerrrrooooyyyyyyy",
   "image": "ubuntu-1604-lts",
-  "key_file": "/home/zemlyak/Documents/OTUS/key.json",
+  "key_file": "/home/zemlyak/Documents/OTUS/zemlyak58_infra/packer/key.json",
   "reddit_file": "/home/zemlyak/Documents/OTUS/zemlyak58_infra/packer/scripts/reddit.service",
   "ssh_user": "ubuntu"
 }

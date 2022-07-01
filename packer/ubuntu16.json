@@ -2,7 +2,7 @@
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "/home/zemlyak/Documents/OTUS/key.json",
+            "service_account_key_file": "/home/zemlyak/Documents/OTUS/zemlyak58_infra/packer/key.json",
             "folder_id": "jjjjjjjenkins",
             "source_image_family": "ubuntu-1604-lts",
             "image_name": "reddit-base-{{timestamp}}",
