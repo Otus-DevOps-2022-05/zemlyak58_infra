@@ -1,11 +1,10 @@
 service_account_key_file = "./key.json"
-token                    = "mytoken"
+#token                    = "mytoken"
 cloud_id                 = "cloud_id_yc_config_list"
 folder_id                = "folder_id_yc_config_list"
 zone                     = "ru-central1-a"
 subnet_id                = "subnet_id"
 image_id                 = "my_image_id"
-#image_id                    = "fd833volvbub5qudpfdc"
 public_key_path   = "~/.ssh/appuser.pub"
 private_key_path  = "~/.ssh/appuser"
 app_servers_count = 2
