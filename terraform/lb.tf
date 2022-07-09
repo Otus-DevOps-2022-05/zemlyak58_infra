@@ -18,7 +18,6 @@ resource "yandex_lb_network_load_balancer" "lb" {
       name = "http"
       http_options {
         port = 9292
-        path = "/ping"
       }
     }
   }
@@ -28,7 +27,7 @@ resource "yandex_lb_target_group" "lb_tg" {
   name = "reddit-app-lb-tg"
 
   dynamic "target" {
-    for_each = yandex_compute_instance.app[*].network_interface[0].ip_address
+    for_each = yandex_compute_instance.app.*.network_interface.0.ip_address
     content {
       subnet_id = var.subnet_id
       address   = target.value
