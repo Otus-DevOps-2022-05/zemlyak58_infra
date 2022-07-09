@@ -1,4 +1,4 @@
-service_account_key_file = "./key.json"
+service_account_key_file = "./terraform/key.json"
 #token                    = "mytoken"
 cloud_id                 = "cloud_id_yc_config_list"
 folder_id                = "folder_id_yc_config_list"
