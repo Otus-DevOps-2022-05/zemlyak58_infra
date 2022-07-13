@@ -1,0 +1,10 @@
+service_account_key_file = "./key.json"
+#token                    = "mytoken"
+cloud_id                 = "XXXXXXXXXXXXXXXXXXXXX"
+folder_id                = "XXXXXXXXXXXXXXXXXXXXX"
+zone                     = "ru-central1-a"
+subnet_id                = "XXXXXXXXXXXXXXXXXXXXX"
+image_id                 = "XXXXXXXXXXXXXXXXXXXXX"
+public_key_path   = "~/.ssh/appuser.pub"
+private_key_path  = "~/.ssh/appuser"
+app_servers_count = 2
