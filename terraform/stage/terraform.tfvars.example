@@ -8,3 +8,5 @@ image_id                 = "XXXXXXXXXXXXXXXXXXXXX"
 public_key_path   = "~/.ssh/appuser.pub"
 private_key_path  = "~/.ssh/appuser"
 app_servers_count = 2
+app_disk_image = "reddit-base-app"
+db_disk_image  = "reddit-base-db"
