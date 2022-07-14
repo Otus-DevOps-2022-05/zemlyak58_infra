@@ -14,6 +14,11 @@ provider "yandex" {
   zone                     = var.zone
 }
 
+module "subnet" {
+  source          = "../modules/vpc"
+  zone            = var.zone
+}
+
 module "app" {
   source          = "../modules/app"
   public_key_path = var.public_key_path
