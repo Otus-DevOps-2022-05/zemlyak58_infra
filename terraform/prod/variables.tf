@@ -29,12 +29,12 @@ variable "image_id" {
 
 variable "app_disk_image" {
   description = "yc compute image list"
-#  default = "reddit-base-app"
+  default = "reddit-base-app"
 }
 
 variable "db_disk_image" {
   description = "yc compute image list"
-#  default = "reddit-base-db"
+  default = "reddit-base-db"
 }
 
 variable "public_key_path" {
