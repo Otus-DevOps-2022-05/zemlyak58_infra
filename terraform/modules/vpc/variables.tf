@@ -19,4 +19,5 @@ variable "public_key_path" {
 
 variable "subnet_id" {
   description = "vpc_subnet_id"
+  default = "reddit-base-db"
 }

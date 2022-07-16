@@ -13,6 +13,7 @@ variable "zone" {
 
 variable "subnet_id" {
   description = "yc vpc subnet list"
+  default     = "my-subnet-id"
 }
 
 variable "service_account_key_file" {
