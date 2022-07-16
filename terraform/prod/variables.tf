@@ -40,12 +40,12 @@ variable "db_disk_image" {
 
 variable "public_key_path" {
   description = "generate key ssh key"
-    default   = "~/.ssh/appuser.pub"
+  default   = "~/.ssh/appuser.pub"
 }
 
 variable "private_key_path" {
   description = "generate key ssh key"
-    default   = "~/.ssh/appuser.pub"
+  default   = "~/.ssh/appuser.pub"
 }
 
 variable "app_servers_count" {
