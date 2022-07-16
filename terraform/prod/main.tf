@@ -16,7 +16,6 @@ provider "yandex" {
 
 module "subnet" {
   source          = "../modules/vpc"
-  zone            = var.zone
 }
 
 module "app" {
