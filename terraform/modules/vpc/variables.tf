@@ -15,9 +15,11 @@ variable "db_disk_image" {
 
 variable "public_key_path" {
   description = "generate key ssh key"
+    default   = "~/.ssh/appuser.pub"
 }
 
 variable "subnet_id" {
   description = "vpc_subnet_id"
   default = "reddit-base-db"
+    default   = "~/.ssh/appuser.pub"
 }
