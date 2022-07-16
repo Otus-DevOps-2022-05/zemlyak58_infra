@@ -11,3 +11,7 @@ variable "app_disk_image" {
 variable "public_key_path" {
   description = "generate key ssh key"
 }
+
+variable "subnet_id" {
+  description = "vpc_subnet_id"
+}
