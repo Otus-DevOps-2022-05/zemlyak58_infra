@@ -1,26 +1,21 @@
-variable "zone" {
-  description = "zone"
-  default     = "ru-central1-a"
+variable public_key_path {
+  description = "Path to the public key used for ssh access"
 }
 
-variable "app_disk_image" {
-  description = "yc compute image list"
-  default     = "reddit-base-app"
+variable counts {
+  description = "instance count"
+  default     = "1"
 }
 
-variable "db_disk_image" {
-  description = "yc compute image list"
-  default     = "reddit-base-db"
+variable db_disk_image {
+  description = "Disk image for reddit db"
+  default = "reddit-db-base"
 }
 
-variable "private_key_path" {
-  description = "generate key ssh key"
+variable subnet_id {
+description = "Subnets for modules"
 }
 
-variable "public_key_path" {
-  description = "generate key ssh key"
-}
-
-variable "subnet_id" {
-  description = "vpc_subnet_id"
+variable private_key_path {
+  description = "Path to private key for provisioner access"
 }

@@ -1,16 +1,17 @@
-#Создание ВМ (из образа)
 resource "yandex_compute_instance" "app" {
-  name = "reddit-app"
-  zone = var.zone
+  count = var.counts
+  name  = "reddit-app${count.index}"
 
   labels = {
     tags = "reddit-app"
   }
-
-  resources {
-    cores  = 2
-    memory = 2
+    resources {
+    core_fraction = 5
+    cores         = 2
+    memory        = 2
   }
+
+  platform_id = "standard-v2"
 
   boot_disk {
     initialize_params {
@@ -20,13 +21,11 @@ resource "yandex_compute_instance" "app" {
 
   network_interface {
     subnet_id = var.subnet_id
-    nat       = true
+    nat = true
   }
 
-  #Для подключения к ВМ
-
   metadata = {
-    ssh-keys = "ubuntu:${file(var.public_key_path)}"
+  ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
   connection {
     type        = "ssh"
@@ -34,5 +33,15 @@ resource "yandex_compute_instance" "app" {
     user        = "ubuntu"
     agent       = false
     private_key = file(var.private_key_path)
+  }
+  #provisioners remote instance actions:
+  #copy unitd:
+provisioner "file" {
+    content     = templatefile("${path.module}/files/puma.service", { ip_mongod = var.ip_mongod})
+    destination = "/tmp/puma.service"
+  }
+  #run bash on remote instance:
+provisioner "remote-exec" {
+    script = "${path.module}/files/deploy.sh"
   }
 }
