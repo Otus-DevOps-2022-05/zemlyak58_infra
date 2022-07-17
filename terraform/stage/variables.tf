@@ -16,6 +16,10 @@ variable subnet_id {
   default     = "my-subnet-id"
 }
 
+variable service_account_key_file {
+  description = "key.json"
+}
+
 variable public_key_path {
   description = "generate key ssh key"
   default   = "~/.ssh/appuser.pub"
