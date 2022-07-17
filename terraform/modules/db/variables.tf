@@ -8,6 +8,10 @@ variable app_disk_image {
   #  default = "reddit-base-app"
 }
 
+variable db_disk_image {
+  description = "yc compute image list"
+  #  default = "reddit-base-db"
+}
 variable private_key_path {
   description = "Path to private key for provisioner access"
   default   = "~/.ssh/appuser"
