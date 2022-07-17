@@ -1,10 +1,10 @@
 #Создание ВМ (из образа)
 resource "yandex_compute_instance" "db" {
-  name  = "reddit-db"
-  zone  = var.zone
+  name = "reddit-db"
+  zone = var.zone
 
   labels = {
-  tags = "reddit-db"
+    tags = "reddit-db"
   }
 
   resources {
@@ -19,13 +19,13 @@ resource "yandex_compute_instance" "db" {
   }
 
   network_interface {
-#     source          = "./modules/vpc"
-#     subnet_id = "module.vpc.app-subnet.id
+    #     source          = "./modules/vpc"
+    #     subnet_id = "module.vpc.app-subnet.id
     subnet_id = var.subnet_id
     nat       = true
   }
 
-#Для подключения к ВМ
+  #Для подключения к ВМ
   connection {
     type        = "ssh"
     host        = self.network_interface.0.nat_ip_address
