@@ -1,10 +1,8 @@
-# terraform {
-#   required_providers {
-#     yandex = {
-#       source = "yandex-cloud/yandex"
-#     }
-#   }
-# }
+terraform {
+  required_providers {
+    yandex = "0.35"
+  }
+}
 
 #Для подключения к облаку
 provider "yandex" {
