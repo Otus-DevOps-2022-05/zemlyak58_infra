@@ -13,6 +13,10 @@ variable "db_disk_image" {
   default     = "reddit-base-db"
 }
 
+variable "private_key_path" {
+  description = "generate key ssh key"
+}
+
 variable "public_key_path" {
   description = "generate key ssh key"
 }
