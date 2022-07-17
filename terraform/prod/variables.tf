@@ -1,41 +1,41 @@
-variable "cloud_id" {
+variable cloud_id {
   description = "yc config list"
 }
 
-variable "folder_id" {
+variable folder_id {
   description = "yc config list"
 }
 
-variable "zone" {
+variable zone {
   description = "zone"
   default     = "ru-central1-a"
 }
 
-variable "subnet_id" {
+variable subnet_id {
   description = "yc vpc subnet list"
   default     = "my-subnet-id"
 }
 
-variable "public_key_path" {
+variable public_key_path {
   description = "generate key ssh key"
   default   = "~/.ssh/appuser.pub"
 }
 
-variable "private_key_path" {
+variable private_key_path {
   description = "generate key ssh key"
   default   = "~/.ssh/appuser"
 }
 
-variable "image_id" {
+variable image_id {
   description = "yc compute image list"
 }
 
-variable "app_disk_image" {
+variable app_disk_image {
   description = "yc compute image list"
   default = "reddit-base-app"
 }
 
-variable "db_disk_image" {
+variable db_disk_image {
   description = "yc compute image list"
   default = "reddit-base-db"
 }
