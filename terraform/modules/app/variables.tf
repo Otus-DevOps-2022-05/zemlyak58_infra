@@ -10,9 +10,11 @@ variable "app_disk_image" {
 
 variable "private_key_path" {
   description = "Path to private key for provisioner access"
+  default   = "~/.ssh/appuser"
 }
 variable "public_key_path" {
   description = "generate key ssh key"
+  default   = "~/.ssh/appuser.pub"
 }
 
 variable "subnet_id" {

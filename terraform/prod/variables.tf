@@ -45,7 +45,7 @@ variable "public_key_path" {
 
 variable "private_key_path" {
   description = "generate key ssh key"
-  default   = "~/.ssh/appuser.pub"
+  default   = "~/.ssh/appuser"
 }
 
 variable "app_servers_count" {
