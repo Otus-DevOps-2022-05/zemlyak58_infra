@@ -13,6 +13,7 @@ variable "zone" {
 
 variable "subnet_id" {
   description = "yc vpc subnet list"
+  default     = "my-subnet-id"
 }
 
 variable "service_account_key_file" {
@@ -29,20 +30,22 @@ variable "image_id" {
 
 variable "app_disk_image" {
   description = "yc compute image list"
-#  default = "reddit-base-app"
+  #  default = "reddit-base-app"
 }
 
 variable "db_disk_image" {
   description = "yc compute image list"
-#  default = "reddit-base-db"
+  #  default = "reddit-base-db"
 }
 
 variable "public_key_path" {
   description = "generate key ssh key"
+  default   = "~/.ssh/appuser.pub"
 }
 
 variable "private_key_path" {
   description = "generate key ssh key"
+  default   = "~/.ssh/appuser.pub"
 }
 
 variable "app_servers_count" {
