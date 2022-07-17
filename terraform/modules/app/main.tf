@@ -1,10 +1,10 @@
 #Создание ВМ (из образа)
 resource "yandex_compute_instance" "app" {
-  name  = "reddit-app"
-  zone  = var.zone
+  name = "reddit-app"
+  zone = var.zone
 
   labels = {
-  tags = "reddit-app"
+    tags = "reddit-app"
   }
 
   resources {
@@ -23,9 +23,16 @@ resource "yandex_compute_instance" "app" {
     nat       = true
   }
 
-#Для подключения к ВМ
+  #Для подключения к ВМ
 
   metadata = {
     ssh-keys = "ubuntu:${file(var.public_key_path)}"
+  }
+  connection {
+    type        = "ssh"
+    host        = self.network_interface.0.nat_ip_address
+    user        = "ubuntu"
+    agent       = false
+    private_key = file(var.private_key_path)
   }
 }

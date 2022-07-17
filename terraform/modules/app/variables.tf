@@ -5,9 +5,12 @@ variable "zone" {
 
 variable "app_disk_image" {
   description = "yc compute image list"
-#  default = "reddit-base-app"
+  #  default = "reddit-base-app"
 }
 
+variable "private_key_path" {
+  description = "Path to private key for provisioner access"
+}
 variable "public_key_path" {
   description = "generate key ssh key"
 }
