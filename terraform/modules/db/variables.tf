@@ -3,11 +3,6 @@ variable zone {
   default     = "ru-central1-a"
 }
 
-variable app_disk_image {
-  description = "yc compute image list"
-  #  default = "reddit-base-app"
-}
-
 variable db_disk_image {
   description = "yc compute image list"
   #  default = "reddit-base-db"
