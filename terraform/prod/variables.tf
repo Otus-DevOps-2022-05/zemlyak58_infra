@@ -1,43 +1,47 @@
-variable cloud_id {
-  description = "Cloud"
-}
-variable folder_id {
-  description = "Folder"
-}
-variable zone {
-  description = "Zone"
-  type        = string
-  default     = "ru-central1-a"
-}
-variable public_key_path {
-  description = "Path to the public key used for ssh access"
-}
-variable private_key_path {
-  description = "Path to private key for provisioner access"
+variable "cloud_id" {
+  description = "yc config list"
 }
 
-variable image_id {
-  description = "Disk image"
+variable "folder_id" {
+  description = "yc config list"
 }
-variable subnet_id {
-  description = "Subnet"
+
+variable "zone" {
+  description = "zone"
+  default     = "ru-central1-a"
 }
-variable service_account_key_file {
-  description = "key.json"
+
+variable "subnet_id" {
+  description = "yc vpc subnet list"
+  default     = "my-subnet-id"
+}
+
+variable "public_key_path" {
+  description = "generate key ssh key"
+  default   = "~/.ssh/appuser.pub"
+}
+
+variable "private_key_path" {
+  description = "generate key ssh key"
+  default   = "~/.ssh/appuser"
+}
+
+variable "image_id" {
+  description = "yc compute image list"
+}
+
+variable "app_disk_image" {
+  description = "yc compute image list"
+  default = "reddit-base-app"
+}
+
+variable "db_disk_image" {
+  description = "yc compute image list"
+  default = "reddit-base-db"
 }
 
 variable counts {
   description = "instance count"
-}
-
-variable db_disk_image {
-  description = "Disk image for reddit db"
-  default     = "reddit-db-base"
-}
-
-variable app_disk_image {
-  description = "Disk image for reddit app"
-  default     = "reddit-app-base"
 }
 
 variable access_key {
