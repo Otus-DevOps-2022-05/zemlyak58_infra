@@ -1,23 +1,23 @@
-variable "zone" {
+variable zone {
   description = "zone"
   default     = "ru-central1-a"
 }
 
-variable "app_disk_image" {
+variable app_disk_image {
   description = "yc compute image list"
   #  default = "reddit-base-app"
 }
 
-variable "private_key_path" {
+variable private_key_path {
   description = "Path to private key for provisioner access"
   default   = "~/.ssh/appuser"
 }
-variable "public_key_path" {
+variable public_key_path {
   description = "generate key ssh key"
   default   = "~/.ssh/appuser.pub"
 }
 
-variable "subnet_id" {
+variable subnet_id {
   description = "vpc_subnet_id"
 }
 
