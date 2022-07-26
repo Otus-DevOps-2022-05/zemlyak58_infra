@@ -4,19 +4,19 @@
             "type": "yandex",
             "service_account_key_file": "{{ user `key_file` }}",
             "folder_id": "{{ user `folder_id` }}",
-            "source_image_family": "ubuntu-1604-lts",
+            "source_image_family": "{{ user `image` }}",
             "image_name": "reddit-base-db",
             "image_family": "reddit-base-db",
-            "ssh_username": "ubuntu",
+            "ssh_username": "{{user `ssh_user`}}",
             "platform_id": "standard-v1",
             "use_ipv4_nat": "true"
         }
     ],
     "provisioners": [
         {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}"
+            "type": "ansible",
+            "playbook_file": "ansible/packer_db.yml",
+            "use_proxy": false
         }
     ]
 }
