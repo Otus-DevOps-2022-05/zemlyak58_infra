@@ -1,7 +1,7 @@
 {
   "folder_id": "llllleeeerrrrooooyyyyyyy",
   "image": "ubuntu-1604-lts",
-  "key_file": "key.json",
-  "reddit_file": "reddit.service",
+  "key_file": "./packer/key.json",
+  "reddit_file": "./packer/scripts/reddit.service",
   "ssh_user": "ubuntu"
 }
