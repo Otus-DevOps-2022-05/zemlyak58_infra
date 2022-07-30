@@ -40,6 +40,6 @@
     # - name: Start mongodb
       # notify: start mongodb
 
-  # handlers:
-    # - name: start mongodb
-      # service: name=mongodb state=started
+  handlers:
+  - name: start mongodb
+    service: name=mongodb state=started

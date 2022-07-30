@@ -1,0 +1,11 @@
+---
+- name: Configure App
+  hosts: app
+  become: true
+
+  vars:
+   db_host: 192.168.10.27
+
+  roles:
+    - app
+    - jdauphant.nginx
