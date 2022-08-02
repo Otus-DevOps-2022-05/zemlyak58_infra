@@ -6,7 +6,7 @@
             "folder_id": "{{ user `folder_id` }}",
             "source_image_family": "{{ user `image` }}",
             "image_name": "reddit-base-app",
-            "image_family": "reddit-app",
+            "image_family": "reddit-base-app",
             "ssh_username": "{{ user `ssh_user` }}",
             "platform_id": "standard-v1",
             "use_ipv4_nat": "true"
@@ -16,7 +16,7 @@
     "provisioners": [
         {
             "type": "ansible",
-            "playbook_file": "./ansible/packer_app.yml"
+            "playbook_file": "./ansible/playbooks/packer_app.yml"
         }
     ]
 }

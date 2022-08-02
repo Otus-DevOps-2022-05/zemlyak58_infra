@@ -1,0 +1,32 @@
+---
+# tasks file for db
+- name: Show info about the env this host belongs to
+  debug:
+    msg: "This host is in {{ env }} environment!!!"
+
+# tasks file for db
+- name: Install a list of packages
+  apt:
+    pkg:
+    - mongodb
+    update_cache: yes
+  tags: install
+
+- name: Enable service mongod
+  systemd:
+    name: mongodb
+    enabled: yes
+  tags: install
+
+- name: Start mongod
+  systemd:
+    name: mongodb
+    state: started
+  tags: install
+
+- name: Change mongo config file
+  template:
+    src: mongod.conf.j2
+    dest: /etc/mognodb.conf
+    mode: 0644
+  notify: restart mongodb
